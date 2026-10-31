@@ -6,60 +6,86 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#081b31">
 <title>Validation Team</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{font-family:Inter,Arial,sans-serif;color:#f1f6ff;background:#081b31}
+:root{font-family:'Plus Jakarta Sans',Arial,sans-serif;color:#f1f6ff;background:#081b31}
 *{box-sizing:border-box}
-body{margin:0;background:linear-gradient(150deg,#081b31,#102b49);min-height:100vh}
-main{max-width:1050px;margin:auto;padding:17px 13px 105px}
-header,.flex,.line,.actions,.weekbar{display:flex;align-items:center;justify-content:space-between;gap:10px}
+body{margin:0;min-height:100vh;background:radial-gradient(ellipse at top left,#103d70 0%,transparent 42%),linear-gradient(145deg,#061529,#081b31 65%,#102b49)}
+main{max-width:1050px;margin:auto;padding:18px 13px 110px}
+button,input,select{font:inherit}
+header,.flex,.actions,.weekbar{display:flex;align-items:center;justify-content:space-between;gap:10px}
 .flex,.actions{flex-wrap:wrap}
-header{margin-bottom:22px}
-.brand{display:flex;align-items:center;gap:12px}
-.logo{width:44px;height:44px;border-radius:14px;background:linear-gradient(135deg,#12c8db,#2874ff);display:grid;place-items:center;box-shadow:0 5px 20px #087bf550}
-.logo svg{width:29px;height:29px}
-h1{font-size:23px;margin:10px 0}
-h2{font-size:17px;margin:0 0 15px}
+header{margin-bottom:24px}
+.brand{display:flex;align-items:center;gap:11px}
+.logo{width:47px;height:47px;flex-shrink:0;border-radius:14px;background:linear-gradient(140deg,#103d85,#061832 60%,#0864bd);border:1px solid #24c7ff;box-shadow:0 0 13px #008cff55;display:grid;place-items:center}
+.logo svg{width:40px;height:40px}
+.brand-title{font-size:17px;font-weight:800;letter-spacing:-.6px}
+.brand-title span{color:#25d5f5}
+h1{font-size:23px;margin:9px 0}
+h2{font-size:17px;margin:0 0 15px;font-weight:800}
 h3{font-size:14px;margin:12px 0}
-.card{background:#102b49;border:1px solid #294462;border-radius:18px;padding:17px;margin-bottom:15px;box-shadow:0 8px 25px #0002}
-input,select{font:inherit;background:#0a213b;color:white;border:1px solid #355473;border-radius:10px;padding:11px;max-width:100%}
+.card{background:linear-gradient(145deg,#102d4d,#0b213b);border:1px solid #284e72;border-radius:18px;padding:17px;margin-bottom:15px;box-shadow:0 8px 26px #0003}
+input,select{background:#0a213b;color:#fff;border:1px solid #3a6487;border-radius:11px;padding:12px;max-width:100%}
 input{width:100%;margin:8px 0 13px;font-size:16px}
-button{font:inherit;border:0;background:#1686ff;color:white;border-radius:10px;padding:11px 14px;font-weight:700;cursor:pointer}
-button:disabled{opacity:.5}
-.secondary{background:#244766;color:#d9ecff}
-.danger{background:#8c3045;color:white}
-.success{background:#176c62;color:#c8fff0}
-.small{font-size:12px;padding:9px}
+input:focus,select:focus{outline:2px solid #16c9ff;outline-offset:1px}
+button{border:0;border-radius:11px;padding:12px 14px;background:linear-gradient(135deg,#03b6ed,#1162f2);color:white;font-weight:800;cursor:pointer}
+button:disabled{opacity:.5;cursor:wait}
+.secondary{background:#214465;color:#e1f2ff;border:1px solid #345d7d}
+.danger{background:#a42e4b}
+.success{background:#176c62}
+.small{font-size:12px;padding:9px 11px}
 .full{width:100%}
 .hidden{display:none!important}
-.muted{color:#a4b9d0;font-size:13px}
+.muted{color:#a7bfd5;font-size:12px;line-height:1.6}
 .error{color:#ff9da9;white-space:pre-wrap;overflow-wrap:anywhere;margin-bottom:12px}
+.error:empty{display:none}
 .stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:15px}
-.stat{background:#173858;border:1px solid #294b6b;border-radius:13px;padding:14px;font-size:12px;color:#b4cbe0}
-.stat strong{display:block;font-size:27px;color:white;margin-top:8px}
-.status{background:#173858;padding:23px 15px;border-radius:15px;text-align:center}
-.timer{font-size:38px;font-weight:800;font-variant-numeric:tabular-nums;margin:16px 0;color:#53d7ff}
-.line{border-bottom:1px solid #294763;padding:14px 0;flex-wrap:wrap}
-.pill{display:inline-block;background:#254f72;color:#cce8ff;border-radius:30px;padding:6px 9px;font-size:11px}
-.pill.on{background:#705126;color:#ffe2a3}
-.pill.off{background:#1c584e;color:#b9ffdc}
-.tablewrap{overflow-x:auto;width:100%}
+.stat{background:linear-gradient(145deg,#103b5b,#0a2543);border:1px solid #22668c;border-radius:13px;padding:13px;font-size:11px;color:#b4d1e5;min-width:0}
+.stat strong{display:block;font-size:25px;color:white;margin-top:9px;overflow-wrap:anywhere}
+.status{background:linear-gradient(145deg,#103b5b,#09233d);border:1px solid #245b80;padding:24px 15px;border-radius:15px;text-align:center}
+.timer{font-size:36px;font-weight:800;font-variant-numeric:tabular-nums;margin:17px 0;color:#52e1ff;letter-spacing:1px}
+.pill{display:inline-block;border-radius:30px;padding:7px 11px;font-size:11px;font-weight:800;white-space:nowrap}
+.pill.on{background:#155a45;color:#65ffba}
+.pill.off{background:#24425c;color:#d0e5f5}
+.tablewrap{overflow-x:auto;width:100%;border-radius:11px}
 table{border-collapse:collapse;width:100%;min-width:540px}
 th,td{border-bottom:1px solid #294763;padding:12px 9px;text-align:left;font-size:12px;white-space:nowrap}
-th{color:#9cb7d2;font-weight:600}
+th{background:#123452;color:#b5d5ec;font-weight:700}
 td{color:#e8f4ff}
-#schedBody select{width:65px;padding:7px 2px;font-size:11px}
-.nav{position:fixed;bottom:0;left:0;right:0;background:#0b233e;border-top:1px solid #294763;display:flex;justify-content:space-around;padding:8px 5px max(10px,env(safe-area-inset-bottom));z-index:20}
-.nav button{flex:1;background:transparent;color:#9cb7d2;font-size:11px;padding:11px 3px}
-.nav button.active{background:#1c456c;color:#70c9ff}
+#schedBody td:first-child,#schedHead th:first-child{position:sticky;left:0;z-index:2;background:#102b49}
+#schedHead th:first-child{z-index:3}
+#schedBody select{width:68px;padding:8px 3px;font-size:11px;font-weight:800}
+.schedule-chip{display:inline-block;min-width:43px;text-align:center;padding:8px 5px;border-radius:8px;font-size:11px;font-weight:800}
+.schedule-chip.D,.schedule-select.D{background:#1755b5;color:white}
+.schedule-chip.OFF,.schedule-select.OFF{background:#45566c;color:white}
+.schedule-chip.AL,.schedule-select.AL{background:#f1b93c;color:#14243b}
+.schedule-chip.SL,.schedule-select.SL{background:#b35c9d;color:white}
+.schedule-chip.VAC,.schedule-select.VAC{background:#7146c9;color:white}
+.schedule-chip.WFH,.schedule-select.WFH{background:#16835c;color:white}
+.legend{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}
+.legend-item{display:flex;align-items:center;gap:5px;font-size:10px;color:#b8d0e6}
+.nav{position:fixed;bottom:0;left:0;right:0;background:#091d35ee;backdrop-filter:blur(15px);border-top:1px solid #2a4c6c;display:flex;justify-content:space-around;padding:8px 5px max(10px,env(safe-area-inset-bottom));z-index:20}
+.nav button{flex:1;background:transparent;color:#a7bfd5;font-size:11px;padding:10px 3px;border-radius:12px}
+.nav button.active{background:linear-gradient(135deg,#078bcf,#1445bd);color:white}
+.nav-icon{display:block;font-size:19px;margin-bottom:3px}
 .filters{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
-.filters button.active{background:#1686ff}
-.notice{background:#594321;color:#ffe5b3;padding:12px;border-radius:10px;font-size:12px}
-.employee{background:#173858;border:1px solid #294b6b;padding:13px;border-radius:13px;margin:9px 0}
-.employee .timer{font-size:25px;margin:8px 0}
-.employee-name{font-size:15px;font-weight:700}
-.live{color:#4ee2ac;font-size:12px}
-#login{max-width:430px;margin:55px auto}
-#login h1{font-size:26px}
+.filters button.active{background:linear-gradient(135deg,#03aeea,#1458e4);border-color:#169fff}
+.notice{background:#40351f;border:1px solid #997323;color:#ffe5b3;padding:12px;border-radius:10px;font-size:12px;line-height:1.6}
+.employee{background:#123553;border:1px solid #294f71;padding:14px;border-radius:14px;margin:9px 0}
+.employee.onbreak{border-color:#168f8c;background:linear-gradient(110deg,#123e58,#102c47)}
+.employee .timer{font-size:25px;margin:10px 0}
+.employee-name{font-size:15px;font-weight:800}
+.live{color:#4ee2ac;font-size:11px;font-weight:700}
+#login{max-width:430px;margin:30px auto}
+#login h1{font-size:25px}
+.login-logo{width:110px;height:110px;margin:8px auto 15px}
+.login-logo .logo{width:110px;height:110px;border-radius:27px}
+.login-logo .logo svg{width:94px;height:94px}
+.login-heading{text-align:center;margin-bottom:30px}
+#employeeFilter{width:100%;margin:8px 0}
+#teamStatus .employee button{min-width:110px}
 @media(min-width:700px){
 .nav{max-width:750px;margin:auto;border-radius:15px 15px 0 0}
 .stats{grid-template-columns:repeat(4,1fr)}
@@ -71,13 +97,27 @@ td{color:#e8f4ff}
 <header>
 <div class="brand">
 <div class="logo">
-<svg viewBox="0 0 40 40" fill="none">
-<path d="M8 21L16 29L32 11" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M9 10H20" stroke="#bafaff" stroke-width="3" stroke-linecap="round"/>
+<svg viewBox="0 0 64 64" fill="none" aria-label="V logo">
+<defs>
+<linearGradient id="vmetal" x1="8" y1="7" x2="52" y2="56" gradientUnits="userSpaceOnUse">
+<stop stop-color="#fff"/>
+<stop offset=".42" stop-color="#cbdaf5"/>
+<stop offset=".65" stop-color="#156bf0"/>
+<stop offset="1" stop-color="#12e4ff"/>
+</linearGradient>
+<linearGradient id="vorbit" x1="5" y1="42" x2="61" y2="27" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0ccfff"/>
+<stop offset=".5" stop-color="#fff"/>
+<stop offset="1" stop-color="#0bb9f4"/>
+</linearGradient>
+</defs>
+<path d="M8 11L28 53L36 53L57 10L43 12L32 37L21 11Z" fill="url(#vmetal)" stroke="#c7eeff" stroke-width=".8"/>
+<path d="M8 40C21 53 48 44 57 31C61 25 56 22 51 23" stroke="url(#vorbit)" stroke-width="4" stroke-linecap="round"/>
+<path d="M38 31L43 36L53 24" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
 </div>
 <div>
-<strong style="font-size:19px">Validation Team</strong>
+<div class="brand-title">Validation <span>Team</span></div>
 <div class="muted">Team Management</div>
 </div>
 </div>
@@ -87,14 +127,17 @@ td{color:#e8f4ff}
 <div id="message" class="error"></div>
 
 <section id="login" class="card">
+<div class="login-heading">
+<div class="login-logo" id="loginLogo"></div>
 <h1>Welcome Back</h1>
 <p class="muted">Sign in to your team account</p>
+</div>
 <form id="loginForm">
 <label>Username
 <input id="email" required autocomplete="username" placeholder="Username">
 </label>
 <label>Password
-<input id="password" type="password" required autocomplete="current-password">
+<input id="password" type="password" required autocomplete="current-password" placeholder="Password">
 </label>
 <button class="full">Sign In</button>
 </form>
@@ -113,7 +156,7 @@ td{color:#e8f4ff}
 <div class="card">
 <h2>My Break</h2>
 <div class="status">
-<div id="breakStatus">Not on Break</div>
+<div id="breakStatus" class="pill off">Not on Break</div>
 <div id="clock" class="timer">00:00:00</div>
 <button id="toggleBreak" class="full">Start Break</button>
 </div>
@@ -131,7 +174,7 @@ td{color:#e8f4ff}
 <div class="card">
 <h2>My Break History</h2>
 <div class="filters">
-<button class="small secondary" data-my-period="today">Today</button>
+<button class="small secondary active" data-my-period="today">Today</button>
 <button class="small secondary" data-my-period="week">Week</button>
 <button class="small secondary" data-my-period="month">Month</button>
 <button class="small secondary" data-my-period="all">All</button>
@@ -164,8 +207,9 @@ td{color:#e8f4ff}
 <tbody id="schedBody"></tbody>
 </table>
 </div>
+<div class="legend" id="scheduleLegend"></div>
 <div id="scheduleActions" class="hidden">
-<div class="actions" style="margin-top:15px">
+<div class="actions" style="margin-top:18px">
 <button id="copyWeek" class="secondary small">Copy Previous</button>
 <button id="publish">Publish Week</button>
 </div>
@@ -180,7 +224,7 @@ td{color:#e8f4ff}
 <span class="live">● Live Updates</span>
 </div>
 <div class="filters">
-<button class="small secondary" data-period="today">Today</button>
+<button class="small secondary active" data-period="today">Today</button>
 <button class="small secondary" data-period="week">Week</button>
 <button class="small secondary" data-period="month">Month</button>
 <button class="small secondary" data-period="all">All Time</button>
@@ -203,7 +247,7 @@ td{color:#e8f4ff}
 
 <div class="card">
 <h2>Employee Summary</h2>
-<p class="muted">Select an employee to view full break history.</p>
+<p class="muted">Select an employee to view their break history.</p>
 <div class="tablewrap">
 <table>
 <thead><tr><th>Employee</th><th>Breaks</th><th>Minutes</th><th>Status</th></tr></thead>
@@ -214,7 +258,11 @@ td{color:#e8f4ff}
 
 <div class="card">
 <h2 id="detailTitle">All Break History</h2>
-<div class="actions" style="margin-bottom:12px">
+<label class="muted" for="employeeFilter">Filter by Employee</label>
+<select id="employeeFilter">
+<option value="">All Employees</option>
+</select>
+<div class="actions" style="margin:10px 0 16px">
 <button id="showAllEmployees" class="secondary small">All Employees</button>
 <button id="exportCsv" class="small">Export Excel CSV</button>
 </div>
@@ -241,15 +289,15 @@ td{color:#e8f4ff}
 </label>
 <button id="createEmployee" class="full">Create Employee</button>
 </form>
-<p class="notice">Employee account creation requires secure Firebase rules. Six-digit passwords are weak and should not be used for sensitive information.</p>
+<p class="notice">Six-digit passwords provide limited security. Use this system only for non-sensitive team information, with appropriate Firebase access rules.</p>
 </div>
 </section>
 
 <nav class="nav">
-<button data-view="home" class="active">⌂ Home</button>
-<button data-view="history">◷ History</button>
-<button data-view="schedule">▦ Schedule</button>
-<button data-view="manager" id="managerTab" class="hidden">▥ Manager</button>
+<button data-view="home" class="active"><span class="nav-icon">⌂</span>Home</button>
+<button data-view="history"><span class="nav-icon">◷</span>History</button>
+<button data-view="schedule"><span class="nav-icon">▦</span>Schedule</button>
+<button data-view="manager" id="managerTab" class="hidden"><span class="nav-icon">♙</span>Manager</button>
 </nav>
 </section>
 </main>
@@ -273,13 +321,23 @@ const fb=initializeApp(firebaseConfig);
 const auth=getAuth(fb);
 const db=getFirestore(fb);
 const $=id=>document.getElementById(id);
+
 let user=null,manager=false,profile=null;
 let myBreaks=[],allBreaks=[],team=[],draft={},unsubs=[];
 let active=null,selectedEmployee=null;
 let managerPeriod='today',myPeriod='today';
 let weekStart=startWeek(new Date());
+let scheduleLoadId=0;
+let stateMap=new Map();
+let breakStateReady=false;
 const statuses=['D','OFF','AL','SL','VAC','WFH'];
 const days=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+const statusNames={
+D:'Duty',OFF:'Day Off',AL:'Annual Leave',
+SL:'Sick Leave',VAC:'Vacation',WFH:'Work From Home'
+};
+
+$('loginLogo').appendChild(document.querySelector('header .logo').cloneNode(true));
 
 function error(e){
 console.error(e);
@@ -341,6 +399,16 @@ return [...list].sort((a,b)=>(timeOf(b.startedAt)?.getTime()||0)-(timeOf(a.start
 function nameOf(uid){
 return team.find(t=>t.uid===uid)?.name||uid||'Unknown';
 }
+function employeeTeam(){
+return team.filter(t=>t.uid!==MANAGER_UID);
+}
+function employeeBreaks(){
+const ids=new Set(employeeTeam().map(t=>t.uid));
+return allBreaks.filter(b=>ids.has(b.userId));
+}
+function syncTeamStates(){
+team.forEach(t=>t.onBreak=stateMap.get(t.uid)===true);
+}
 function show(view){
 if(view==='manager'&&!manager)return;
 for(const v of ['home','history','schedule','manager']){
@@ -362,7 +430,7 @@ if(!name.includes('@'))name=name.toLowerCase()+'@example.com';
 try{await signInWithEmailAndPassword(auth,name,$('password').value)}
 catch(err){error(err)}
 };
-$('logout').onclick=()=>signOut(auth);
+$('logout').onclick=()=>signOut(auth).catch(error);
 
 function clock(){
 if(!active){$('clock').textContent='00:00:00';return}
@@ -372,15 +440,15 @@ function updateLiveTimers(){
 clock();
 document.querySelectorAll('[data-live-uid]').forEach(el=>{
 const b=allBreaks.find(x=>x.userId===el.dataset.liveUid&&x.status==='active');
-if(b)el.textContent=timerText(seconds(b));
-else el.textContent='Starting...';
+el.textContent=b?timerText(seconds(b)):'Starting...';
 });
 }
 setInterval(updateLiveTimers,1000);
 
 function renderBreaks(){
 active=myBreaks.find(b=>b.status==='active')||null;
-$('breakStatus').textContent=active?'You are on break':'You are not on break';
+$('breakStatus').textContent=active?'On Break':'Not on Break';
+$('breakStatus').className='pill '+(active?'on':'off');
 $('toggleBreak').textContent=active?'End Break':'Start Break';
 $('toggleBreak').classList.toggle('danger',!!active);
 clock();
@@ -413,6 +481,9 @@ renderHistory();
 async function changeBreak(uid){
 if(!user)throw Error('Not signed in');
 if(uid!==user.uid&&!manager)throw Error('Manager only');
+if(manager&&uid!==user.uid&&!employeeTeam().some(t=>t.uid===uid)){
+throw Error('Employee not found');
+}
 const stateRef=doc(db,'breakState',uid);
 await runTransaction(db,async tx=>{
 const state=await tx.get(stateRef);
@@ -448,19 +519,22 @@ finally{$('toggleBreak').disabled=false}
 };
 
 function renderTeam(){
-$('memberCount').textContent=team.length;
-const activeStates=team.filter(t=>t.onBreak);
-$('onBreakCount').textContent=activeStates.length;
-$('teamStatus').innerHTML=team.map(t=>{
+const members=employeeTeam();
+$('memberCount').textContent=members.length;
+$('onBreakCount').textContent=members.filter(t=>t.onBreak).length;
+const ordered=[...members].sort((a,b)=>
+Number(b.onBreak)-Number(a.onBreak)||a.name.localeCompare(b.name)
+);
+$('teamStatus').innerHTML=ordered.map(t=>{
 const b=allBreaks.find(x=>x.userId===t.uid&&x.status==='active');
 return `
-<div class="employee">
+<div class="employee ${t.onBreak?'onbreak':''}">
 <div class="flex">
 <span class="employee-name">${esc(t.name)}</span>
-<span class="pill ${t.onBreak?'on':'off'}">${t.onBreak?'On Break':'Working'}</span>
+<span class="pill ${t.onBreak?'on':'off'}">${t.onBreak?'On Break':'Not on Break'}</span>
 </div>
 ${t.onBreak?`<div class="timer" data-live-uid="${esc(t.uid)}">${b?timerText(seconds(b)):'Starting...'}</div>`:
-'<p class="muted">Not on break</p>'}
+'<p class="muted">Not on Break</p>'}
 <button class="small ${t.onBreak?'danger':'secondary'}" data-break-uid="${esc(t.uid)}">${t.onBreak?'End Break':'Start Break'}</button>
 </div>`;
 }).join('')||'No employees found';
@@ -473,35 +547,48 @@ finally{b.disabled=false}
 };
 });
 }
+function updateEmployeeFilter(){
+const el=$('employeeFilter');
+const previous=selectedEmployee||'';
+el.innerHTML='<option value="">All Employees</option>'+
+employeeTeam().map(t=>`<option value="${esc(t.uid)}">${esc(t.name)}</option>`).join('');
+if(previous&&!employeeTeam().some(t=>t.uid===previous))selectedEmployee=null;
+el.value=selectedEmployee||'';
+}
 function renderManager(){
 if(!manager)return;
 renderTeam();
-const periodBreaks=allBreaks.filter(b=>matchesPeriod(b,managerPeriod));
+const periodBreaks=employeeBreaks().filter(b=>matchesPeriod(b,managerPeriod));
 const done=completed(periodBreaks);
 $('totalBreakCount').textContent=done.length;
 $('totalBreakMinutes').textContent=done.reduce((s,b)=>s+duration(b),0);
-$('employeeSummary').innerHTML=team.map(t=>{
+$('employeeSummary').innerHTML=employeeTeam().map(t=>{
 const items=done.filter(b=>b.userId===t.uid);
 const mins=items.reduce((s,b)=>s+duration(b),0);
 return `<tr>
 <td><button class="secondary small" data-employee="${esc(t.uid)}">${esc(t.name)}</button></td>
 <td>${items.length}</td><td>${mins}</td>
-<td><span class="pill ${t.onBreak?'on':'off'}">${t.onBreak?'On Break':'Working'}</span></td>
+<td><span class="pill ${t.onBreak?'on':'off'}">${t.onBreak?'On Break':'Not on Break'}</span></td>
 </tr>`;
 }).join('');
 document.querySelectorAll('[data-employee]').forEach(b=>{
 b.onclick=()=>{
 selectedEmployee=b.dataset.employee;
+$('employeeFilter').value=selectedEmployee;
 renderDetails();
 $('detailTitle').scrollIntoView({behavior:'smooth',block:'start'});
 };
 });
+updateEmployeeFilter();
 renderDetails();
 }
-function renderDetails(){
-let list=allBreaks.filter(b=>matchesPeriod(b,managerPeriod));
+function filteredManagerBreaks(){
+let list=employeeBreaks().filter(b=>matchesPeriod(b,managerPeriod));
 if(selectedEmployee)list=list.filter(b=>b.userId===selectedEmployee);
-list=sorted(list);
+return sorted(list);
+}
+function renderDetails(){
+const list=filteredManagerBreaks();
 const done=completed(list);
 $('detailTitle').textContent=selectedEmployee?nameOf(selectedEmployee)+' — Break History':'All Break History';
 $('detailCount').textContent=done.length;
@@ -516,8 +603,13 @@ $('managerHistory').innerHTML=list.map(b=>`
 <td>${b.status==='active'?'Active':'Completed'}</td>
 </tr>`).join('')||'<tr><td colspan="6">No records found</td></tr>';
 }
+$('employeeFilter').onchange=e=>{
+selectedEmployee=e.target.value||null;
+renderDetails();
+};
 $('showAllEmployees').onclick=()=>{
 selectedEmployee=null;
+$('employeeFilter').value='';
 renderDetails();
 };
 document.querySelectorAll('[data-period]').forEach(b=>{
@@ -535,10 +627,9 @@ team=snap.docs.map(d=>({
 uid:d.id,name:d.data().name||'Employee',onBreak:false
 }));
 const states=await getDocs(collection(db,'breakState'));
-states.docs.forEach(s=>{
-const t=team.find(x=>x.uid===s.id);
-if(t)t.onBreak=s.data().active===true;
-});
+stateMap=new Map(states.docs.map(d=>[d.id,d.data().active===true]));
+breakStateReady=true;
+syncTeamStates();
 renderManager();
 }
 $('refreshTeam').onclick=()=>loadTeam().catch(error);
@@ -577,88 +668,115 @@ btn.disabled=false;
 };
 
 function scheduleDocId(uid,week){return uid+'_'+week}
+function normalizeDays(values){
+return Array.from({length:7},(_,i)=>{
+const v=values?.[i]==='WRK'?'D':values?.[i];
+return statuses.includes(v)?v:'OFF';
+});
+}
 function renderSchedule(){
 $('weekTitle').textContent=fmt(weekStart)+' – '+fmt(weekDay(6));
 $('schedHead').innerHTML='<tr><th>Employee</th>'+
 days.map((d,i)=>`<th>${d}<div>${fmt(weekDay(i))}</div></th>`).join('')+'</tr>';
-$('schedBody').innerHTML=team.map(t=>`
+$('schedBody').innerHTML=employeeTeam().map(t=>`
 <tr><td>${esc(t.name)}</td>
 ${days.map((_,i)=>{
 const v=draft[t.uid]?.[i]||'OFF';
 return `<td>${manager?`
-<select data-uid="${esc(t.uid)}" data-day="${i}">
+<select class="schedule-select ${v}" data-uid="${esc(t.uid)}" data-day="${i}">
 ${statuses.map(s=>`<option value="${s}" ${s===v?'selected':''}>${s}</option>`).join('')}
-</select>`:`<strong>${v}</strong>`}</td>`;
-}).join('')}</tr>`).join('')||'<tr><td>No employees</td></tr>';
+</select>`:`<span class="schedule-chip ${v}">${v}</span>`}</td>`;
+}).join('')}</tr>`).join('')||'<tr><td colspan="8">No employees found</td></tr>';
 document.querySelectorAll('#schedBody select').forEach(el=>{
-el.onchange=()=>{draft[el.dataset.uid][Number(el.dataset.day)]=el.value};
+el.onchange=()=>{
+draft[el.dataset.uid][Number(el.dataset.day)]=el.value;
+el.className='schedule-select '+el.value;
+};
 });
+$('scheduleLegend').innerHTML=statuses.map(s=>
+`<span class="legend-item"><span class="schedule-chip ${s}">${s}</span>${statusNames[s]}</span>`
+).join('');
 }
 async function loadSchedule(){
+if(!user)return;
+const loadId=++scheduleLoadId;
 clearError();
 try{
 if(manager)await loadTeam();
-else team=[{uid:user.uid,name:profile.name||'Me'}];
-draft={};
-const week=dateKey(weekStart);
-for(const t of team){
-const snap=await getDoc(doc(db,'schedules',scheduleDocId(t.uid,week)));
-const values=snap.exists()&&Array.isArray(snap.data().days)?
-snap.data().days:Array(7).fill('OFF');
-draft[t.uid]=Array.from({length:7},(_,i)=>{
-const v=values[i]==='WRK'?'D':values[i];
-return statuses.includes(v)?v:'OFF';
-});
+else{
+const snap=await getDocs(collection(db,'users'));
+team=snap.docs.map(d=>({
+uid:d.id,name:d.data().name||'Employee',onBreak:false
+}));
 }
+if(loadId!==scheduleLoadId)return;
+const week=dateKey(weekStart);
+const members=employeeTeam();
+const results=await Promise.all(members.map(t=>
+getDoc(doc(db,'schedules',scheduleDocId(t.uid,week)))
+));
+if(loadId!==scheduleLoadId)return;
+const nextDraft={};
+members.forEach((t,i)=>{
+const snap=results[i];
+nextDraft[t.uid]=normalizeDays(snap.exists()&&Array.isArray(snap.data().days)?snap.data().days:[]);
+});
+draft=nextDraft;
 renderSchedule();
-}catch(e){error(e)}
+}catch(e){
+if(loadId===scheduleLoadId)error(e);
+}
 }
 $('prevWeek').onclick=()=>{
-weekStart.setDate(weekStart.getDate()-7);loadSchedule();
+weekStart.setDate(weekStart.getDate()-7);
+loadSchedule();
 };
 $('nextWeek').onclick=()=>{
-weekStart.setDate(weekStart.getDate()+7);loadSchedule();
+weekStart.setDate(weekStart.getDate()+7);
+loadSchedule();
 };
 $('copyWeek').onclick=async()=>{
 if(!manager)return;
+clearError();
 try{
 const prev=new Date(weekStart);
 prev.setDate(prev.getDate()-7);
-for(const t of team){
-const snap=await getDoc(doc(db,'schedules',scheduleDocId(t.uid,dateKey(prev))));
-const values=snap.exists()?snap.data().days:[];
-draft[t.uid]=Array.from({length:7},(_,i)=>{
-const v=values[i]==='WRK'?'D':values[i];
-return statuses.includes(v)?v:'OFF';
+const members=employeeTeam();
+const results=await Promise.all(members.map(t=>
+getDoc(doc(db,'schedules',scheduleDocId(t.uid,dateKey(prev))))
+));
+members.forEach((t,i)=>{
+draft[t.uid]=normalizeDays(results[i].exists()?results[i].data().days:[]);
 });
-}
 renderSchedule();
 }catch(e){error(e)}
 };
 $('publish').onclick=async()=>{
 if(!manager)return;
 clearError();
+const btn=$('publish');
+btn.disabled=true;
 try{
 const batch=writeBatch(db),week=dateKey(weekStart);
-for(const t of team){
+for(const t of employeeTeam()){
 batch.set(doc(db,'schedules',scheduleDocId(t.uid,week)),{
-userId:t.uid,weekStart:week,days:draft[t.uid],
+userId:t.uid,weekStart:week,days:draft[t.uid]||Array(7).fill('OFF'),
 updatedAt:serverTimestamp(),updatedBy:user.uid
 });
 }
 await batch.commit();
 alert('Week published successfully');
 }catch(e){error(e)}
+finally{btn.disabled=false}
 };
 
 $('exportCsv').onclick=()=>{
 if(!manager)return;
 const names=new Map(team.map(t=>[t.uid,t.name]));
-let list=allBreaks.filter(b=>matchesPeriod(b,managerPeriod));
-if(selectedEmployee)list=list.filter(b=>b.userId===selectedEmployee);
+const list=filteredManagerBreaks();
 const rows=[
 ['Employee','User ID','Date','Start','End','Minutes','Status','Started By','Ended By'],
-...sorted(list).map(b=>[
+...list.map(b=>[
 names.get(b.userId)||b.userId,b.userId,
 fmtDate(timeOf(b.startedAt)),
 timeOf(b.startedAt)?.toLocaleString()||'',
@@ -684,8 +802,11 @@ setTimeout(()=>URL.revokeObjectURL(url),3000);
 onAuthStateChanged(auth,async u=>{
 unsubs.forEach(f=>f());
 unsubs=[];
+scheduleLoadId++;
 user=u;manager=false;profile=null;
 active=null;myBreaks=[];allBreaks=[];team=[];
+stateMap=new Map();
+breakStateReady=false;
 selectedEmployee=null;
 clearError();
 $('login').classList.toggle('hidden',!!u);
@@ -694,6 +815,7 @@ $('managerTab').classList.add('hidden');
 if(!u)return;
 try{
 const p=await getDoc(doc(db,'users',u.uid));
+if(auth.currentUser?.uid!==u.uid)return;
 if(!p.exists())throw Error('No employee profile found');
 profile=p.data();
 manager=u.uid===MANAGER_UID&&profile.role==='manager';
@@ -701,7 +823,9 @@ $('greeting').textContent='Hello, '+(profile.name||'Team member');
 $('roleLabel').textContent=manager?'Manager':'Employee';
 $('managerTab').classList.toggle('hidden',!manager);
 $('scheduleActions').classList.toggle('hidden',!manager);
-$('scheduleHint').textContent=manager?'Edit and publish the week':'Your published schedule';
+$('scheduleHint').textContent=manager?
+'Edit and publish the weekly team schedule':
+'View the published team schedule';
 show('home');
 
 const q=query(collection(db,'breaks'),where('userId','==',u.uid));
@@ -712,31 +836,31 @@ renderBreaks();
 
 if(manager){
 await loadTeam();
+if(auth.currentUser?.uid!==u.uid)return;
 unsubs.push(onSnapshot(collection(db,'breaks'),s=>{
 allBreaks=s.docs.map(d=>({id:d.id,...d.data()}));
 renderManager();
 },error));
 unsubs.push(onSnapshot(collection(db,'breakState'),s=>{
-s.docs.forEach(d=>{
-const t=team.find(x=>x.uid===d.id);
-if(t)t.onBreak=d.data().active===true;
-});
+stateMap=new Map(s.docs.map(d=>[d.id,d.data().active===true]));
+breakStateReady=true;
+syncTeamStates();
 renderManager();
 },error));
 unsubs.push(onSnapshot(collection(db,'users'),s=>{
-const oldStates=new Map(team.map(t=>[t.uid,t.onBreak]));
 team=s.docs.map(d=>({
 uid:d.id,
 name:d.data().name||'Employee',
-onBreak:oldStates.get(d.id)||false
+onBreak:stateMap.get(d.id)===true
 }));
 renderManager();
 },error));
 }else{
-team=[{uid:u.uid,name:profile.name||'Me'}];
+team=[{uid:u.uid,name:profile.name||'Me',onBreak:false}];
 }
 }catch(e){error(e)}
 });
 </script>
 </body>
 </html>
+
